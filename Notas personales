@@ -1,0 +1,20 @@
+# Nombre del archivo donde se guardarán las notas
+nombre_archivo = 'my_notes.txt'
+
+# Escritura de notas en el archivo
+with open(nombre_archivo, 'w') as file:
+    # Escribimos las líneas de notas personales
+    file.write("Recordar botar la basura.\n")
+    file.write("Recordar salir a hacer ejercicio 1 hora al día.\n")
+    file.write("Recordar revisar información de programación 1 hora al día.\n")
+
+print(f"Notas escritas exitosamente en {nombre_archivo}.")
+
+# Lectura de notas del archivo
+with open(nombre_archivo, 'r') as file:
+    # Lee el archivo línea por línea
+    for line in file:
+        # Muestra en la consola cada línea leída
+        print(line.strip())  # Elimina saltos de línea adicionales con strip()
+
+# El archivo se cierra automáticamente al salir del bloque 'with'
